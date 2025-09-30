@@ -1,0 +1,42 @@
+2025-09-30 14:54:49,733 INFO: 密码管家后端启动 [in S:\Code_Unzip\Password-Manager\backend\app.py:62]
+2025-09-30 14:54:55,717 INFO: 响应状态: 200 [in S:\Code_Unzip\Password-Manager\backend\app.py:42]
+2025-09-30 14:54:55,717 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'POST, OPTIONS'} [in S:\Code_Unzip\Password-Manager\backend\app.py:43]
+2025-09-30 14:54:56,176 ERROR: Exception on /api/register [POST] [in E:\Interpreter\Python3.12\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "E:\Interpreter\Python3.12\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Code_Unzip\Password-Manager\backend\api\auth_routes.py", line 26, in register
+    db = get_db()
+         ^^^^^^^^
+  File "S:\Code_Unzip\Password-Manager\backend\utils\db.py", line 20, in get_db
+    g.db = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\pooling.py", line 294, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\connection.py", line 167, in __init__
+    self.connect(**kwargs)
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\abstracts.py", line 1178, in connect
+    self._open_connection()
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\connection.py", line 573, in _open_connection
+    self._do_auth(
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\connection.py", line 312, in _do_auth
+    self._auth_switch_request(username, password)
+  File "E:\Interpreter\Python3.12\Lib\site-packages\mysql\connector\connection.py", line 369, in _auth_switch_request
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-09-30 14:54:56,184 INFO: 响应状态: 500 [in S:\Code_Unzip\Password-Manager\backend\app.py:42]
+2025-09-30 14:54:56,185 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '265'} [in S:\Code_Unzip\Password-Manager\backend\app.py:43]

@@ -1,0 +1,2 @@
+2025-09-30 14:49:03,797 INFO: 密码管家后端启动 [in S:\Code_Unzip\Password-Manager\backend\app.py:62]
+2025-09-30 14:49:03,937 ERROR: 数据库初始化失败: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES) [in S:\Code_Unzip\Password-Manager\backend\app.py:70]
