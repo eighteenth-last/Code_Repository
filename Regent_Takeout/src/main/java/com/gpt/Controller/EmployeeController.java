@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
+
 /**
  * @Author: 程序员Eighteen
  * @CreateTime: 2025-10-04  13:37
@@ -57,7 +60,6 @@ public class EmployeeController {
 
         // 第六步  登陆成功，将员工id存入session并返回登陆成功的结果
         request.getSession().setAttribute("employee",emp.getId());
-
         return R.success(emp);
     }
 
@@ -66,11 +68,28 @@ public class EmployeeController {
     public R<String> logout(HttpServletRequest request){
         // 清理session中员工的登录id
         request.getSession().removeAttribute("employee");
-
         return R.success("退出成功");
     }
 
     // 添加员工
+    @PostMapping
+    public R<String> save(HttpServletRequest request,@RequestBody EmployeeEntity employee){
+        log.info("新增员工信息:{}",employee.toString());
 
+        // 设置初始密码，使用md5加密
+        employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
+
+        employee.setCreateTime(new Date());
+        employee.setUpdateTime(new Date());
+
+        // 获得当前登录用户id
+        Long empId = (Long) request.getSession().getAttribute("employee");
+
+        employee.setCreateUser(empId);
+        employee.setUpdateUser(empId);
+
+        employeeService.save(employee);
+        return R.success("新增员工成功");
+    }
 
 }
