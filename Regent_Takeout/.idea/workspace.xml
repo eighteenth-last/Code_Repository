@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/GlobalException.java" afterDir="false" />
+    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="新增员工异常处理">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Config/MybatisPlusConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/RegentTakeoutApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/RegentTakeoutApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gpt/RegentTakeoutApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "eighteenth-last"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/eighteenth-last/Code_Repository.git",
+    "accountId": "e9a289be-e22a-4991-85ca-e7004a6fc05d"
+  }
+}]]></component>
   <component name="HttpClientOnboardingState"><![CDATA[{
   "isOnboardingCommentShown": true
 }]]></component>
@@ -58,6 +79,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.RegentTakeoutApplication.executor": "Run",
     "git-widget-placeholder": "main",
@@ -145,8 +167,25 @@
       <workItem from="1759555268216" duration="14000" />
       <workItem from="1759555500763" duration="6033000" />
       <workItem from="1759567011360" duration="7101000" />
-      <workItem from="1759634920705" duration="1338000" />
+      <workItem from="1759634920705" duration="5885000" />
     </task>
+    <task id="LOCAL-00001" summary="新增员工异常处理">
+      <option name="closed" value="true" />
+      <created>1759636439560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759636439560</updated>
+    </task>
+    <task id="LOCAL-00002" summary="新增员工异常处理">
+      <option name="closed" value="true" />
+      <created>1759636543934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759636543934</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +196,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -167,5 +218,14 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="新增员工异常处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增员工异常处理" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="page" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

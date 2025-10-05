@@ -3,7 +3,9 @@ com\gpt\Service\Impl\EmployeeServiceImpl.class
 com\gpt\Config\WebMvcConfig.class
 com\gpt\Mapper\EmployeeMapper.class
 com\gpt\Common\R.class
+com\gpt\Common\GlobalException.class
 com\gpt\Filter\LoginCheckFilter.class
 com\gpt\Entity\EmployeeEntity.class
 com\gpt\Service\EmployeeService.class
 com\gpt\RegentTakeoutApplication.class
+com\gpt\Config\MybatisPlusConfig.class
