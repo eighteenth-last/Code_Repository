@@ -11,7 +11,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 public class RegentTakeoutApplication {
     public static void main(String[] args) {
         SpringApplication.run(RegentTakeoutApplication.class, args);
-        log.info("启动成功");
+        log.info("启动成功...........");
     }
 
 }

@@ -4,13 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="完善员工分页查询">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/JacksonObjectMapper.java" afterDir="false" />
+    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/BaseContextCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/DishEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/SetmealEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/DishMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/SetmealMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/DishService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/DishServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/SetmealServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/SetmealService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Common/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Config/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/RegentTakeoutApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/RegentTakeoutApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/api/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/api/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/api/combo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/api/combo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/api/food.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/api/food.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/api/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/combo.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/api/combo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/food.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/api/food.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/GlobalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Common/GlobalException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Filter/LoginCheckFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/RegentTakeoutApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/RegentTakeoutApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +58,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "eighteenth-last"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;eighteenth-last&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/eighteenth-last/Code_Repository.git",
-    "accountId": "e9a289be-e22a-4991-85ca-e7004a6fc05d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/eighteenth-last/Code_Repository.git&quot;,
+    &quot;accountId&quot;: &quot;e9a289be-e22a-4991-85ca-e7004a6fc05d&quot;
   }
-}]]></component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -58,6 +82,9 @@
         <option name="userSettingsFile" value="E:\Maven\apache-maven-3.9.11\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -78,7 +105,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.RegentTakeoutApplication.executor": "Run",
+    "Spring Boot.RegentTakeoutApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "S:/Code_Repository/Regent_Takeout/src/main/resources",
@@ -102,6 +129,7 @@
       <recent name="S:\Code_Repository\Regent_Takeout\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gpt.Entity" />
       <recent name="com.gpt.Common" />
     </key>
   </component>
@@ -167,7 +195,8 @@
       <workItem from="1759555268216" duration="14000" />
       <workItem from="1759555500763" duration="6033000" />
       <workItem from="1759567011360" duration="7101000" />
-      <workItem from="1759634920705" duration="11038000" />
+      <workItem from="1759634920705" duration="11116000" />
+      <workItem from="1759718281593" duration="12742000" />
     </task>
     <task id="LOCAL-00001" summary="新增员工异常处理">
       <option name="closed" value="true" />
@@ -193,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759645292312</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="员工管理模块已完成">
+      <option name="closed" value="true" />
+      <created>1759664741442</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759664741442</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,12 +265,14 @@
     </ignored-roots>
     <MESSAGE value="新增员工异常处理" />
     <MESSAGE value="完善员工分页查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善员工分页查询" />
+    <MESSAGE value="员工管理模块已完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="员工管理模块已完成" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="page" />
+        <watch expression="((EmployeeEntity)metaObject.originalObject).createUser" custom="com.gpt.Entity.EmployeeEntity" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,6 +1,7 @@
 package com.gpt.Filter;
 
 import com.alibaba.fastjson2.JSON;
+import com.gpt.Common.BaseContextCommon;
 import com.gpt.Common.R;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
@@ -58,6 +59,13 @@ public class LoginCheckFilter implements Filter {
         // 4、判断登陆状态，如果已登录，则直接放行
         if(request.getSession().getAttribute("employee")!=null){
             log.info("已登录,id为{}",request.getSession().getAttribute("employee"));
+
+            Long empID = (Long) request.getSession().getAttribute("employee");
+            BaseContextCommon.setCurrentUserId(empID);
+
+            long id = Thread.currentThread().getId();
+            log.info("线程id为{}:",id);
+
             filterChain.doFilter(request, response);
             return;
         }
