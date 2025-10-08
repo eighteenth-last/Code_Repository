@@ -32,4 +32,4 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 reggie:
-  path: "S:/Code_Repository/Regent_Takeout/Images"
+  path: S:/Code_Repository/Regent_Takeout/Images/

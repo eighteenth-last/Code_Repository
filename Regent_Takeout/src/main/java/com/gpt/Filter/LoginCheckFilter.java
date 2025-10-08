@@ -40,6 +40,7 @@ public class LoginCheckFilter implements Filter {
                 "/employee/login",
                 "/employee/layout",
                 "/backend/**",
+                "/common/**",
                 "/front/**",
                 "/swagger-ui.html",
                 "/user/code",

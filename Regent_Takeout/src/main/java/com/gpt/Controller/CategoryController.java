@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @Author: 程序员Eighteen
  * @CreateTime: 2025-10-06  11:51
@@ -65,5 +67,19 @@ public class CategoryController {
         log.info("修改分类信息{}", categoryEntity);
         categoryService.updateById(categoryEntity);
         return R.success("修改分类成功");
+    }
+
+    // 根据条件查询分类数据
+    @GetMapping("/list")
+    public R<List<CategoryEntity>> list(CategoryEntity categoryEntity) {
+        // 条件构造器
+        LambdaQueryWrapper<CategoryEntity> queryWrapper = new LambdaQueryWrapper<>();
+        // 添加条件
+        queryWrapper.eq(categoryEntity.getType()!=null,CategoryEntity::getType,categoryEntity.getType());
+        // 添加排序条件
+        queryWrapper.orderByDesc(CategoryEntity::getSort).orderByDesc(CategoryEntity::getUpdateTime);
+
+        List<CategoryEntity> list = categoryService.list(queryWrapper);
+        return R.success(list);
     }
 }
