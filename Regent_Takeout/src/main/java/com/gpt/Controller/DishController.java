@@ -178,4 +178,19 @@ public class DishController {
         return R.success("菜品删除成功");
     }
 
+    // 根据条件查询菜品数据
+    @GetMapping("/list")
+    public R<List<DishEntity>>list(DishEntity dishEntity){
+        // 构造查询条件对象
+        LambdaQueryWrapper<DishEntity> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(dishEntity.getCategoryId()!=null,DishEntity::getCategoryId,dishEntity.getCategoryId());
+        // 添加查询条件
+        queryWrapper.eq(DishEntity::getStatus,1);
+        // 添加排序条件
+        queryWrapper.orderByAsc(DishEntity::getSort).orderByDesc(DishEntity::getUpdateTime);
+
+        List<DishEntity> list = dishService.list(queryWrapper);
+        return R.success(list);
+    }
+
 }

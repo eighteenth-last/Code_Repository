@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gpt.Entity.SetmealDishEntity;
 import com.gpt.Mapper.SetmealDishMapper;
 import com.gpt.Service.SetmealDishService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,5 +15,6 @@ import org.springframework.stereotype.Service;
  * @Version: 1.0
  */
 @Service
+@Slf4j
 public class SetmealDishServiceImpl extends ServiceImpl<SetmealDishMapper, SetmealDishEntity> implements SetmealDishService {
 }
