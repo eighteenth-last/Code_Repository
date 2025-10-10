@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="文件的上传和下载、菜品管理整体">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/SetmealController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Dto/SetmealDto.java" afterDir="false" />
+    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="套餐管理的增删改查、停售/起售">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/UseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/UseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/UseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Utils/SMSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Utils/ValidateCodeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/SetmealDishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/SetmealDishServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/SetmealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/SetmealServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Service/SetmealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/SetmealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/api/combo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/api/combo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/combo.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/backend/api/combo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Controller/DishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealDishServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealDishServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/SetmealService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Service/SetmealService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gpt/Filter/LoginCheckFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,10 +88,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.RegentTakeoutApplication.executor": "Debug",
+    "Spring Boot.RegentTakeoutApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "S:/Code_Repository/Regent_Takeout/src/main/java/com/gpt/Dto",
+    "last_opened_file_path": "S:/Code_Repository/Regent_Takeout/src/main/java/com/gpt/Utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,6 +109,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Code_Repository\Regent_Takeout\src\main\java\com\gpt\Utils" />
       <recent name="S:\Code_Repository\Regent_Takeout\src\main\java\com\gpt\Dto" />
       <recent name="S:\Code_Repository\Regent_Takeout\src\main\java\com\gpt\Entity" />
       <recent name="S:\Code_Repository\Regent_Takeout\src\main\resources\backend\page\demo" />
@@ -190,7 +189,8 @@
       <workItem from="1759634920705" duration="11116000" />
       <workItem from="1759718281593" duration="13074000" />
       <workItem from="1759894695358" duration="21675000" />
-      <workItem from="1759970425467" duration="8522000" />
+      <workItem from="1759970425467" duration="8701000" />
+      <workItem from="1760082955365" duration="8369000" />
     </task>
     <task id="LOCAL-00001" summary="新增员工异常处理">
       <option name="closed" value="true" />
@@ -240,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759926801298</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="套餐管理的增删改查、停售/起售">
+      <option name="closed" value="true" />
+      <created>1759979079398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759979079398</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +286,8 @@
     <MESSAGE value="员工管理模块已完成" />
     <MESSAGE value="设置公共字段填充（TableField）、实现分类管理" />
     <MESSAGE value="文件的上传和下载、菜品管理整体" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件的上传和下载、菜品管理整体" />
+    <MESSAGE value="套餐管理的增删改查、停售/起售" />
+    <option name="LAST_COMMIT_MESSAGE" value="套餐管理的增删改查、停售/起售" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -44,6 +44,7 @@ public class LoginCheckFilter implements Filter {
                 "/front/**",
                 "/swagger-ui.html",
                 "/user/code",
+                "/user/sendMsg",
                 "/user/login"
         };
 
@@ -57,7 +58,7 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
-        // 4、判断登陆状态，如果已登录，则直接放行
+        // 4-1、判断登陆状态，如果已登录，则直接放行
         if(request.getSession().getAttribute("employee")!=null){
             log.info("已登录,id为{}",request.getSession().getAttribute("employee"));
 
@@ -66,6 +67,17 @@ public class LoginCheckFilter implements Filter {
 
             long id = Thread.currentThread().getId();
             log.info("线程id为{}:",id);
+
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        // 4-2、判断移动端登陆状态，如果已登录，则直接放行
+        if(request.getSession().getAttribute("user")!=null){
+            log.info("已登录,id为{}",request.getSession().getAttribute("user"));
+
+            Long userID = (Long) request.getSession().getAttribute("user");
+            BaseContextCommon.setCurrentUserId(userID);
 
             filterChain.doFilter(request, response);
             return;
