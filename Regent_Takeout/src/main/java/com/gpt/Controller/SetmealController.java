@@ -132,4 +132,17 @@ public class SetmealController {
         setmealService.updateBatchById(list);
         return R.success("套餐状态修改成功");
     }
+
+    // 根据条件查询套餐数据  -- 用户端显示
+    @GetMapping("/list")
+    public R<List<SetmealEntity>> list(SetmealEntity setmeal){
+        LambdaQueryWrapper<SetmealEntity> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(setmeal.getCategoryId() != null,SetmealEntity::getCategoryId,setmeal.getCategoryId());
+        queryWrapper.eq(setmeal.getStatus() != null,SetmealEntity::getStatus,setmeal.getStatus());
+        queryWrapper.orderByDesc(SetmealEntity::getUpdateTime);
+
+        List<SetmealEntity> list = setmealService.list(queryWrapper);
+
+        return R.success(list);
+    }
 }

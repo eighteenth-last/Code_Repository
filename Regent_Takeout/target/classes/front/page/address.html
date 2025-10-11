@@ -38,7 +38,7 @@
                     <img src="./../images/edit.png" @click.stop.prevent="toAddressEditPage(item)"/>
                     <div class="divSplit"></div>
                     <div class="divDefault" >
-                        <img src="./../images/checked_true.png" v-if="item.isDefault === true">
+                        <img src="./../images/checked_true.png" v-if="item.isDefault === 1">
                         <img src="./../images/checked_false.png" @click.stop.prevent="setDefaultAddress(item)" v-else>设为默认地址
                     </div>
                 </div>
@@ -106,11 +106,37 @@
                     ],
                     }
                 },
-                computed:{},
-                created(){
-                    this.initData()
-                },
-                mounted(){},
+            computed:{},
+            created(){
+                this.initData()
+            },
+            mounted(){
+                // 监听页面显示事件（包括首次加载和从缓存恢复）
+                const handlePageShow = () => {
+                    if (sessionStorage.getItem('needRefreshAddress') === 'true') {
+                        sessionStorage.removeItem('needRefreshAddress')
+                        this.initData()
+                    }
+                }
+                
+                // 立即检查一次
+                handlePageShow()
+                
+                // 监听 pageshow 事件，处理浏览器前进/后退
+                window.addEventListener('pageshow', (event) => {
+                    // event.persisted 为 true 表示页面从缓存恢复
+                    if (event.persisted) {
+                        handlePageShow()
+                    }
+                })
+                
+                // 监听 visibilitychange 事件，处理页面重新可见
+                document.addEventListener('visibilitychange', () => {
+                    if (!document.hidden) {
+                        handlePageShow()
+                    }
+                })
+            },
                 methods:{
                     goBack(){
                         history.go(-1)

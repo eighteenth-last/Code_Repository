@@ -24,7 +24,7 @@
             <div class="divUser">
                 <img src="./../images/headPage.png"/>
                 <div class="desc">
-                    <div class="divName">林之迷 <img src="./../images/women.png"/></div>
+                    <div class="divName">{{userName || '用户'}} <img v-if="userSex === '女'" src="./../images/women.png"/></div>
                     <div class="divPhone">{{userPhone}}</div>
                 </div>
             </div>
@@ -92,6 +92,9 @@
                         code:''
                     },
                     msgFlag:false,
+                    userName:'',//用户名
+                    userPhone:'',//手机号
+                    userSex:'',//性别
                     order:[{
                         orderTime:'',//下单时间
                         status:undefined,//订单状态 1已结账，2未结账，3已退单，4已完成，5已取消
@@ -106,11 +109,30 @@
             },
             computed:{},
             created(){
-                this.userPhone =sessionStorage.getItem("userPhone")
+                this.userPhone = sessionStorage.getItem("userPhone")
                 this.initData()
+                this.getUserInfo()
             },
             mounted(){},
             methods:{
+                // 获取用户信息
+                async getUserInfo(){
+                    const res = await $axios({
+                        url: '/user/info',
+                        method: 'get'
+                    })
+                    if(res.code === 1 && res.data){
+                        this.userName = res.data.name || '用户'
+                        this.userSex = res.data.sex || ''
+                        // 更新 sessionStorage
+                        if(res.data.name){
+                            sessionStorage.setItem("userName", res.data.name)
+                        }
+                        if(res.data.sex){
+                            sessionStorage.setItem("userSex", res.data.sex)
+                        }
+                    }
+                },
                 goBack(){
                     history.go(-1)
                 },
@@ -169,13 +191,24 @@
                     return str
                 },
                 async addOrderAgain(){
-                    const res = await orderAgainApi({id:this.order[0].id})
-                    if(res.code === 1){
-                        window.requestAnimationFrame(()=>{
-                            window.location.href = '/front/index.html'
-                        }) 
-                    }else{
-                        this.$notify({ type:'warning', message:res.msg});
+                    try {
+                        // 显示加载提示
+                        this.$notify({ type:'info', message:'正在加载，请稍候...'});
+                        
+                        const res = await orderAgainApi({id:this.order[0].id})
+                        if(res.code === 1){
+                            this.$notify({ type:'success', message:'商品已添加到购物车'});
+                            // 延迟跳转，让用户看到成功提示
+                            setTimeout(() => {
+                                window.requestAnimationFrame(()=>{
+                                    window.location.href = '/front/index.html'
+                                })
+                            }, 500)
+                        }else{
+                            this.$notify({ type:'warning', message:res.msg || '操作失败'});
+                        }
+                    } catch (error) {
+                        this.$notify({ type:'error', message:'请求失败，请重试'});
                     }
                 },
                 async toPageLogin(){

@@ -75,7 +75,14 @@
                         const res = await loginApi({phone:this.form.phone,code:this.form.code})
                         this.loading = false
                         if(res.code === 1){
-                            sessionStorage.setItem("userPhone",this.form.phone)
+                            // 保存用户信息到 sessionStorage
+                            sessionStorage.setItem("userPhone", this.form.phone)
+                            if(res.data && res.data.name) {
+                                sessionStorage.setItem("userName", res.data.name)
+                            }
+                            if(res.data && res.data.sex) {
+                                sessionStorage.setItem("userSex", res.data.sex)
+                            }
                             window.requestAnimationFrame(()=>{
                                 window.location.href= '/front/index.html'
                             })                           

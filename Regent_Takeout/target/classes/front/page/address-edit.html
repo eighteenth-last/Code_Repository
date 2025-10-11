@@ -134,9 +134,16 @@
                         }
                         
                         if(res.code === 1){
-                            window.requestAnimationFrame(()=>{
-                                window.location.replace('/front/page/address.html')
-                            })
+                            // 标记需要刷新
+                            sessionStorage.setItem('needRefreshAddress', 'true')
+                            
+                            // 显示成功提示
+                            this.$notify({ type:'success', message:'保存成功'});
+                            
+                            // 平滑返回上一页
+                            setTimeout(() => {
+                                history.go(-1)
+                            }, 300)
                         }else{
                             this.$notify({ type:'warning', message:res.msg});
                         }
@@ -149,9 +156,16 @@
                         .then( async () => {
                             const res = await deleteAddressApi({ids:this.id })
                             if(res.code === 1){
-                                window.requestAnimationFrame(()=>{
-                                    window.location.replace('/front/page/address.html')
-                                })
+                                // 标记需要刷新
+                                sessionStorage.setItem('needRefreshAddress', 'true')
+                                
+                                // 显示成功提示
+                                this.$notify({ type:'success', message:'删除成功'});
+                                
+                                // 平滑返回上一页
+                                setTimeout(() => {
+                                    history.go(-1)
+                                }, 300)
                             }else{
                                 this.$notify({ type:'warning', message:res.msg});
                             }

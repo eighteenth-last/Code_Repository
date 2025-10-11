@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Random;
 
 /**
  * @Author: 程序员Eighteen
@@ -29,6 +30,20 @@ public class UserController {
 
     @Autowired
     private UseService useService;
+
+    /**
+     * 生成随机用户名
+     * 格式：新用户 + 6位随机字母数字组合
+     */
+    private String generateRandomUsername() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder("新用户");
+        for (int i = 0; i < 6; i++) {
+            sb.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        return sb.toString();
+    }
 
     @GetMapping("/code")
     public R<String> sendMsg(String phone, HttpSession session){
@@ -76,12 +91,40 @@ public class UserController {
                 // 判断当前手机号对应的用户是否为新用户，如果是新用户就自动完成注册
                 user = new UserEntity();
                 user.setPhone(phone);
+                user.setName(generateRandomUsername()); // 生成随机用户名
                 user.setStatus(1);
                 useService.save(user);
+                log.info("新用户注册成功，用户名：{}", user.getName());
             }
             session.setAttribute("user", user.getId());
             return R.success(user);
         }
         return R.error("登录失败");
+    }
+
+    // 获取当前登录用户信息
+    @GetMapping("/info")
+    public R<UserEntity> getUserInfo(HttpSession session) {
+        Long userId = (Long) session.getAttribute("user");
+        if(userId == null) {
+            return R.error("用户未登录");
+        }
+        
+        UserEntity user = useService.getById(userId);
+        if(user != null) {
+            return R.success(user);
+        }
+        return R.error("用户信息不存在");
+    }
+
+    // 移动端用户退出
+    @PostMapping("/loginout")
+    public R<String> logout(HttpSession session) {
+        log.info("用户退出登录");
+        
+        // 清除session中的用户信息
+        session.removeAttribute("user");
+        
+        return R.success("退出成功");
     }
 }

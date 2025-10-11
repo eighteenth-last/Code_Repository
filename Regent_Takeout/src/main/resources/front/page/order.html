@@ -131,13 +131,24 @@
                     }
                 },
                 async addOrderAgain(order){
-                    const res = await orderAgainApi({id:order.id})
-                    if(res.code === 1){
-                        window.requestAnimationFrame(()=>{
-                            window.location.href= '/front/index.html'
-                        })
-                    }else{
-                        this.$notify({ type:'warning', message:res.msg});
+                    try {
+                        // 显示加载提示
+                        this.$notify({ type:'info', message:'正在加载，请稍候...'});
+                        
+                        const res = await orderAgainApi({id:order.id})
+                        if(res.code === 1){
+                            this.$notify({ type:'success', message:'商品已添加到购物车'});
+                            // 延迟跳转，让用户看到成功提示
+                            setTimeout(() => {
+                                window.requestAnimationFrame(()=>{
+                                    window.location.href= '/front/index.html'
+                                })
+                            }, 500)
+                        }else{
+                            this.$notify({ type:'warning', message:res.msg || '操作失败'});
+                        }
+                    } catch (error) {
+                        this.$notify({ type:'error', message:'请求失败，请重试'});
                     }
                 },
                 getStatus(status){

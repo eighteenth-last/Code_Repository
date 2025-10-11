@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.gpt.Common.R;
 import com.gpt.Dto.DishDto;
-import com.gpt.Entity.CategoryEntity;
-import com.gpt.Entity.DishEntity;
-import com.gpt.Entity.SetmealDishEntity;
-import com.gpt.Entity.SetmealEntity;
+import com.gpt.Entity.*;
 import com.gpt.Common.CustomException;
 import com.gpt.Service.CategoryService;
 import com.gpt.Service.DishFlavorService;
@@ -178,9 +175,26 @@ public class DishController {
         return R.success("菜品删除成功");
     }
 
+    /**
+     // 根据条件查询菜品数据
+     @GetMapping("/list")
+     public R<List<DishEntity>>list(DishEntity dishEntity){
+     // 构造查询条件对象
+     LambdaQueryWrapper<DishEntity> queryWrapper = new LambdaQueryWrapper<>();
+     queryWrapper.eq(dishEntity.getCategoryId()!=null,DishEntity::getCategoryId,dishEntity.getCategoryId());
+     // 添加查询条件
+     queryWrapper.eq(DishEntity::getStatus,1);
+     // 添加排序条件
+     queryWrapper.orderByAsc(DishEntity::getSort).orderByDesc(DishEntity::getUpdateTime);
+
+     List<DishEntity> list = dishService.list(queryWrapper);
+     return R.success(list);
+     }
+     */
+
     // 根据条件查询菜品数据
     @GetMapping("/list")
-    public R<List<DishEntity>>list(DishEntity dishEntity){
+    public R<List<DishDto>>list(DishEntity dishEntity){
         // 构造查询条件对象
         LambdaQueryWrapper<DishEntity> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(dishEntity.getCategoryId()!=null,DishEntity::getCategoryId,dishEntity.getCategoryId());
@@ -190,7 +204,33 @@ public class DishController {
         queryWrapper.orderByAsc(DishEntity::getSort).orderByDesc(DishEntity::getUpdateTime);
 
         List<DishEntity> list = dishService.list(queryWrapper);
-        return R.success(list);
+
+        List<DishDto> dishDtoList=list.stream().map((item)->{
+            DishDto dishDto=new DishDto();
+
+            BeanUtils.copyProperties(item,dishDto); //再次拷贝，拷贝普通属性
+
+            Long categoryId = item.getCategoryId();  //分类id
+
+            // 根据id查询分类对象
+            CategoryEntity category = categoryService.getById(categoryId);
+            if(category!=null){
+                String categoryName = category.getName();
+                dishDto.setCategoryName(categoryName);
+            }
+
+            // 查询口味数据
+            Long dishId = item.getId();
+            LambdaQueryWrapper<DishFlavorEntity>queryWrapper1=new LambdaQueryWrapper<>();
+            queryWrapper1.in(DishFlavorEntity::getDishId, dishId);
+            List<DishFlavorEntity> dishFlavorEntityList = dishFlavorService.list(queryWrapper1);  // 查出来口味集合
+            dishDto.setFlavors(dishFlavorEntityList);
+
+            return  dishDto;
+
+        }).collect(Collectors.toList());
+
+        return R.success(dishDtoList);
     }
 
 }

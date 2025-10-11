@@ -260,14 +260,22 @@
           },
           // 取消，派送，完成
           cancelOrDeliveryOrComplete (status, id) {
-            this.$confirm('确认更改该订单状态?', '提示', {
+            const params = {
+              status,
+              id
+            }
+            
+            const confirmText = status === 3 ? '确认派送该订单?' : status === 4 ? '确认完成该订单?' : '确认更改该订单状态?'
+            const successText = status === 3 ? '订单已派送' : status === 4 ? '订单已完成' : '订单状态已更新'
+            
+            this.$confirm(confirmText, '提示', {
                 'confirmButtonText': '确定',
                 'cancelButtonText': '取消',
                 'type': 'warning'
               }).then(() => {
                 editOrderDetail(params).then(res => {
                   if (res.code === 1) {
-                    this.$message.success(status === 3 ? '订单已派送' : '订单已完成')
+                    this.$message.success(successText)
                     this.init()
                   } else {
                     this.$message.error(res.msg || '操作失败')
@@ -275,11 +283,9 @@
                 }).catch(err => {
                   this.$message.error('请求出错了：' + err)
                 })
-            })
-            const params = {
-              status,
-              id
-            }
+              }).catch(() => {
+                // 用户取消操作
+              })
           },
           handleClose () {
             this.dialogVisible = false

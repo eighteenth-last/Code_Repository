@@ -114,6 +114,14 @@
   margin-right: 5rem;
 }
 
+#user .divLinks .item span {
+  font-size: 15rem;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+  flex: 1;
+}
+
 #user .divLinks .item i {
   position: absolute;
   right: 0;

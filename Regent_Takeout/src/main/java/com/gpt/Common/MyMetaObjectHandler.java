@@ -27,10 +27,19 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         log.info("----------公共字段自动填充【insert】----------");
         log.info(metaObject.toString());
 
-        metaObject.setValue("createTime", new Date());
-        metaObject.setValue("updateTime", new Date());
-        metaObject.setValue("createUser", BaseContextCommon.getCurrentUserId());
-        metaObject.setValue("updateUser", BaseContextCommon.getCurrentUserId());
+        // 只有当字段存在时才填充，避免对没有这些字段的表报错
+        if (metaObject.hasSetter("createTime")) {
+            metaObject.setValue("createTime", new Date());
+        }
+        if (metaObject.hasSetter("updateTime")) {
+            metaObject.setValue("updateTime", new Date());
+        }
+        if (metaObject.hasSetter("createUser")) {
+            metaObject.setValue("createUser", BaseContextCommon.getCurrentUserId());
+        }
+        if (metaObject.hasSetter("updateUser")) {
+            metaObject.setValue("updateUser", BaseContextCommon.getCurrentUserId());
+        }
     }
 
     // 更新自动填充
@@ -42,7 +51,12 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         long id = Thread.currentThread().getId();
         log.info("线程id为{}:",id);
 
-        metaObject.setValue("updateTime", new Date());
-        metaObject.setValue("updateUser", BaseContextCommon.getCurrentUserId());
+        // 只有当字段存在时才填充，避免对没有这些字段的表报错
+        if (metaObject.hasSetter("updateTime")) {
+            metaObject.setValue("updateTime", new Date());
+        }
+        if (metaObject.hasSetter("updateUser")) {
+            metaObject.setValue("updateUser", BaseContextCommon.getCurrentUserId());
+        }
     }
 }
