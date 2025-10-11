@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="用户下单、及所有api接口的完成">
+    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="瑞吉外卖项目全部完成">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +182,7 @@
       <workItem from="1759970425467" duration="8701000" />
       <workItem from="1760082955365" duration="8660000" />
       <workItem from="1760145294069" duration="17666000" />
-      <workItem from="1760171077636" duration="2578000" />
+      <workItem from="1760171077636" duration="3333000" />
     </task>
     <task id="LOCAL-00001" summary="新增员工异常处理">
       <option name="closed" value="true" />
@@ -263,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760173535145</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="瑞吉外卖项目全部完成">
+      <option name="closed" value="true" />
+      <created>1760173767739</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1760173767739</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +313,8 @@
     <MESSAGE value="套餐管理的增删改查、停售/起售" />
     <MESSAGE value="移动端用户登录" />
     <MESSAGE value="用户下单、及所有api接口的完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户下单、及所有api接口的完成" />
+    <MESSAGE value="瑞吉外卖项目全部完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="瑞吉外卖项目全部完成" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

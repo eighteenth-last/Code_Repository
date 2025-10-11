@@ -151,14 +151,14 @@ Regent_Takeout/
 - **Maven**: 3.6+
 - **MySQL**: 8.0+
 - **Redis**: 最新稳定版（可选）
-- **IDE**: IntelliJ IDEA / Eclipse
+- **IDE**: IntelliJ IDEA
 
 ### 安装步骤
 
 #### 1. 克隆项目
 
 ```bash
-git clone https://github.com/your-username/Regent_Takeout.git
+git clone https://github.com/eighteenth-last/Regent_Takeout.git
 cd Regent_Takeout
 ```
 
@@ -189,7 +189,7 @@ spring:
       port: 6379
 
 reggie:
-  path: /your/path/to/Images/  # 修改图片上传路径
+  path: /your/path/to/Images/  # 修改图片上传路径  我自己用的绝对路径
 ```
 
 #### 4. 编译项目
@@ -505,7 +505,7 @@ Dto:         XXXDto
 
 **程序员Eighteen**
 
-- 📧 Email: your-email@example.com
+- 📧 Email: 3273495516@qq.com
 - 🔗 GitHub: [@YourGitHub](https://github.com/your-github)
 
 ---
