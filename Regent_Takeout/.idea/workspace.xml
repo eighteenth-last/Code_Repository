@@ -4,219 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="用户下单">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/AddressBookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/OrderDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/OrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/AddressBookEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/OrderDetailEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/OrdersEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Entity/ShoppingCartEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/AddressBookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/OrderDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/OrdersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Mapper/ShoppingCartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/AddressBookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/AddressBookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/OrderDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/OrdersServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/Impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/OrderDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/OrdersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Service/ShoppingCartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/front/cartData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Common/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Common/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gpt/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/order/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/order/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/api/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/address-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/address-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/styles/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/category.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/combo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/food.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/member.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/404-images/404-cloud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/404-images/404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_back@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_clean@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_close@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/icon_index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/icon_upload@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/jine_m-2@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/renshu@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/xiangmujine@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/img_brand01@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/img_denglu_bj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/login/login-l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/login/login-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/login/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/noImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/category/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/combo/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/combo/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/demo/upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/food/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/food/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/login/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/member/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/member/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/order/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/axios/axios.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/fonts/element-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/fonts/element-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/vue/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/fonts/element-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/fonts/element-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/demo_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/BaseContextCommon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/CustomException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/GlobalException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/JacksonObjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/MyMetaObjectHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Common/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Config/WebMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/CategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/DishController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/EmployeeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/SetmealController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Dto/DishDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Dto/SetmealDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/CategoryEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/DishEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/DishFlavorEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/EmployeeEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/SetmealDishEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/SetmealEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Entity/UserEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Filter/LoginCheckFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/CategoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/DishFlavorMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/DishMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/EmployeeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/SetmealDishMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/SetmealMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Mapper/UseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/RegentTakeoutApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/CategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/DishFlavorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/DishService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/CategoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/DishFlavorServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/DishServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealDishServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/SetmealServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/Impl/UseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/SetmealDishService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/SetmealService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Service/UseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Utils/SMSUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gpt/Utils/ValidateCodeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/address.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/fonts/DIN-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/fonts/DIN-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/fonts/PingFangSC-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/fonts/PingFangSC-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/fonts/PingFangSC-Semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/cart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/cart_active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/checked_false.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/checked_true.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/demo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/demo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/demo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/demo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/favico.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/headPage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/location.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/locations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/mainBg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/noImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/no_order.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/no_wifi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/orders.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/subtract.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/images/women.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/js/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/js/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/js/vant.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/add-order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/address-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/no-wify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/pay-success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/project.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/project.private.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/add-order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/address-edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/address.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/no-wify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/pay-success.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/user.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/styles/vant.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gpt/RegentTakeoutApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/gpt/UploadFileTest.class" beforeDir="false" />
+    <list default="true" id="d2ca01b6-f760-4d12-8861-d14a6998d6d3" name="更改" comment="用户下单、及所有api接口的完成">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,7 +181,7 @@
       <workItem from="1759970425467" duration="8701000" />
       <workItem from="1760082955365" duration="8660000" />
       <workItem from="1760145294069" duration="17666000" />
-      <workItem from="1760171077636" duration="2254000" />
+      <workItem from="1760171077636" duration="2578000" />
     </task>
     <task id="LOCAL-00001" summary="新增员工异常处理">
       <option name="closed" value="true" />
@@ -466,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760092802552</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="用户下单、及所有api接口的完成">
+      <option name="closed" value="true" />
+      <created>1760173535145</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760173535145</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +303,8 @@
     <MESSAGE value="文件的上传和下载、菜品管理整体" />
     <MESSAGE value="套餐管理的增删改查、停售/起售" />
     <MESSAGE value="移动端用户登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="移动端用户登录" />
+    <MESSAGE value="用户下单、及所有api接口的完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户下单、及所有api接口的完成" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
