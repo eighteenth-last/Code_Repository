@@ -1,0 +1,6 @@
+[submodule "AI-Chain-Lab"]
+	path = AI-Chain-Lab
+	url = https://github.com/eighteenth-last/Ai_Chain_Lab.git
+[submodule "Password-Manager"]
+	path = Password-Manager
+	url = https://github.com/eighteenth-last/Password-manager.git
